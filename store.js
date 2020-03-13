@@ -23,6 +23,7 @@ StoreInformation(storeInfo);
 function StoreInformation(jsonObj) {
 let StoreInformation = jsonObj.StoreInformation;
 let section = document.querySelector('section');
+for (let i = 0; i< StoreInformation.length; i++){
 
   //build HTML elements
   let product = document.createElement('product');
@@ -32,22 +33,20 @@ let section = document.querySelector('section');
   let p2 = document.createElement('p')
   let ul = document.createElement('ul')
 
-img.setAttribute('src', 'https://jaypatel01122000.github.io/Lab-4/store.json/Image' + StoreInformation[i].image);
-img.setAttribute('alt', StoreInformation.image);
-h2.textContent = StoreInformation.name;
-p1.textContent = 'size' + StoreInformation.size;
-p2.textContent = 'price' + StoreInformation.price;
-let toppings = StoreInformation.toppings;
-for(let j = 0; j<  toppings.length; j++) {
+img.setAttribute('src', 'https://jaypatel01122000.github.io/Lab-4/Image/' + StoreInformation[i].image);
+img.setAttribute('alt', StoreInformation[i].image);
+h2.textContent = StoreInformation[i].productName;
+p1.textContent = 'price' + StoreInformation[i].price;
+p2.textContent = 'details' + StoreInformation[i].details;
 
   let listItem = document.createElement('li');
-  listItem.textContent = toppings[j];
   ul.appendChild(listItem);
-}
-  article.appendChild(img);
-  article.appendChild(h2);
-  article.appendChild(p1);
-  article.appendChild(p2);
-  article.appendChild(ul);
-  section.appendChild(storeInfo);
+
+  product.appendChild(img);
+  product.appendChild(h2);
+  product.appendChild(p1);
+  product.appendChild(p2);
+  product.appendChild(ul);
+  section.appendChild(product);
+  }
 }

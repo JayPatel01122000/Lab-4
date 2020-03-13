@@ -1,8 +1,8 @@
 {
   "StoreInformation" : [
     {
-      "name of product" : "An inflatable cat horn"
-      "price" : 6.02;
+      "name of product" : "An inflatable cat horn",
+      "price" : 6.02,
       "details" : "You probably already think your cat is quite the unicorn, but you can easily make it official with this accessory that definitely won't get you clawed to oblivion.",
       "image" : "inflatable-cat-horn.JPEG"
     },

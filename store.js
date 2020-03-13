@@ -34,10 +34,10 @@ let section = document.querySelector('section');
 
 img.setAttribute('src', 'https://jaypatel01122000.github.io/Lab-4/store.json/Image' + StoreInformation[i].image);
 img.setAttribute('alt', StoreInformation.image);
-h2.textContent = StoreInformation[i].name;
-p1.textContent = 'size' + StoreInformation[i].size;
-p2.textContent = 'price' + StoreInformation[i].price;
-let toppings = StoreInformation[i].toppings;
+h2.textContent = StoreInformation.name;
+p1.textContent = 'size' + StoreInformation.size;
+p2.textContent = 'price' + StoreInformation.price;
+let toppings = StoreInformation.toppings;
 for(let j = 0; j<  toppings.length; j++) {
 
   let listItem = document.createElement('li');

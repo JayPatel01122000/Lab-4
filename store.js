@@ -3,26 +3,27 @@
 //access the JSON file using XHR object
 let requestURL = 'https://jaypatel01122000.github.io/Lab-4/store.json';
 
+//function to access the information and callback
 function storeInformation(url, callback) {
     //Create new XHR object, XHR object allows us to fetch data without a page referesh
     let request = new XMLHttpRequest();
     //opening a new request
     request.open('GET', requestURL);
-    //remove pizzaType
+
     request.responseType = 'json';
-    //send the request using the send methos
+    //send the request using the send method
     request.send();
-    //wait for the request to be returned, store the response in a variable, invoke StoreInformation function with StoreInformation as argument
+
     request.onload = function() {
         callback(request.response);
     }
 }
-
+//create a jsonobject and build html elements
 function Information(jsonObj) {
     let StoreInformation = jsonObj.StoreInformation;
     let section = document.querySelector('section');
     for (let i = 0; i < StoreInformation.length; i++) {
-        //build HTML elements
+        //build html elements
         let article = document.createElement('article');
         let h2 = document.createElement('h2');
         let img = document.createElement('img');
@@ -41,6 +42,6 @@ function Information(jsonObj) {
         article.appendChild(p2);
         section.appendChild(article);
     }
-  }
+}
 
-    storeInformation('https://jaypatel01122000.github.io/Lab-4/store.json', Information);
+storeInformation('https://jaypatel01122000.github.io/Lab-4/store.json', Information);

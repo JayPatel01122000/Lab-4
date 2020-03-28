@@ -15,7 +15,6 @@ function storeInformation(url, callback) {
     //wait for the request to be returned, store the response in a variable, invoke StoreInformation function with StoreInformation as argument
     request.onload = function() {
         callback(request.response);
-        StoreInformation(storeInfo);
     }
 }
 

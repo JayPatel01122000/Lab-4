@@ -30,7 +30,7 @@ function Information(jsonObj) {
         let p1 = document.createElement('p');
         let p2 = document.createElement('p');
 
-        img.setAttribute('src', 'https://github.com/JayPatel01122000/Lab-4/Image/' + StoreInformation[i].image);
+        img.setAttribute('src', 'https://jaypatel01122000.github.io/Lab-4/Image/' + StoreInformation[i].image);
         img.setAttribute('alt', StoreInformation[i].image);
         h2.textContent = StoreInformation[i].productName;
         p1.textContent = 'price' + StoreInformation[i].price;

@@ -19,7 +19,7 @@ function storeInformation(url, callback) {
     }
 }
 
-function storeInformation(jsonObj) {
+function Information(jsonObj) {
     let StoreInformation = jsonObj.StoreInformation;
     let section = document.querySelector('section');
     for (let i = 0; i < StoreInformation.length; i++) {
@@ -42,3 +42,5 @@ function storeInformation(jsonObj) {
         article.appendChild(p2);
         section.appendChild(article);
     }
+
+    storeInformation('https://jaypatel01122000.github.io/Lab-4/store.json', Information);

@@ -31,7 +31,6 @@ for (let i = 0; i< StoreInformation.length; i++){
   let img = document.createElement('img')
   let p1 = document.createElement('p')
   let p2 = document.createElement('p')
-  let ul = document.createElement('ul')
 
 img.setAttribute('src', 'https://github.com/JayPatel01122000/Lab-4/tree/master/Image' + StoreInformation[i].image);
 img.setAttribute('alt', StoreInformation[i].image);
@@ -39,14 +38,11 @@ h2.textContent = StoreInformation[i].productName;
 p1.textContent = 'price' + StoreInformation[i].price;
 p2.textContent = 'details' + StoreInformation[i].details;
 
-  let listItem = document.createElement('li');
-  ul.appendChild(listItem);
 
   product.appendChild(img);
   product.appendChild(h2);
   product.appendChild(p1);
   product.appendChild(p2);
-  product.appendChild(ul);
   section.appendChild(product);
   }
 }

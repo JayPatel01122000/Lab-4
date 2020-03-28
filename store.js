@@ -41,5 +41,6 @@ function Information(jsonObj) {
         article.appendChild(p2);
         section.appendChild(article);
     }
+  }
 
     storeInformation('https://jaypatel01122000.github.io/Lab-4/store.json', Information);
